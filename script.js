@@ -4,7 +4,7 @@
  */
 document.getElementById("mybtn").addEventListener("click", displayGrid);
 
-var clickCount = 1;
+let clickCount = 1;
 
 // This function is used to display the grid box when the crop button is clicked 
 function displayGrid() {
@@ -25,22 +25,22 @@ function displayGrid() {
 "use strict";
 
 // Minimum resizable area
-var minWidth = 60;
-var minHeight = 60;
+let minWidth = 60;
+let minHeight = 60;
   
 // Thresholds
-var FULLSCREEN_MARGINS = -10;
-var MARGINS = 4;
+let FULLSCREEN_MARGINS = -10;
+let MARGINS = 4;
   
 // End of what's configurable.
-var clicked = null;
-var onRightEdge, onBottomEdge, onLeftEdge, onTopEdge;
+let clicked = null;
+let onRightEdge, onBottomEdge, onLeftEdge, onTopEdge;
   
-var rightScreenEdge, bottomScreenEdge;
-var b, x, y;  
-var redraw = false;
+let rightScreenEdge, bottomScreenEdge;
+let b, x, y;  
+let redraw = false;
   
-var crop = document.getElementById('crop-box-display');
+let crop = document.getElementById('crop-box-display');
   
 // Adding eventListeners for Mouse events
 crop.addEventListener('mousedown', onMouseDown);
@@ -93,7 +93,7 @@ function onMouseDown(e) {
 function onDown(e) {
   calc(e); // calling the fucntion calc and passed the event e
   
-  var isResizing = onRightEdge || onBottomEdge || onTopEdge || onLeftEdge;
+  let isResizing = onRightEdge || onBottomEdge || onTopEdge || onLeftEdge;
   
   clicked = {
     x: x,
@@ -134,7 +134,7 @@ function calc(e) {
   bottomScreenEdge = window.innerHeight - MARGINS;
 }
   
-var e;
+let e;
 
 /**
  * this function is used for ongoing movements of an element
@@ -161,7 +161,7 @@ function animate() {
     if (clicked.onBottomEdge) crop.style.height = Math.max(y, minHeight) + 'px'; // resizing for the bottomEdge of the grid box
   
     if (clicked.onLeftEdge) {
-      var currentWidth = Math.max(clicked.cx - e.clientX  + clicked.w, minWidth); // The Math.max() function returns the largest of zero or more numbers.
+      let currentWidth = Math.max(clicked.cx - e.clientX  + clicked.w, minWidth); // The Math.max() function returns the largest of zero or more numbers.
       if (currentWidth > minWidth) {
         crop.style.width = currentWidth + 'px';
         crop.style.left = e.clientX + 'px'; 
@@ -169,7 +169,7 @@ function animate() {
     } // resizing for the leftEdge of the grid box
   
     if (clicked.onTopEdge) {
-      var currentHeight = Math.max(clicked.cy - e.clientY  + clicked.h, minHeight); // The Math.max() function returns the largest of zero or more numbers.
+      let currentHeight = Math.max(clicked.cy - e.clientY  + clicked.h, minHeight); // The Math.max() function returns the largest of zero or more numbers.
       if (currentHeight > minHeight) {
         crop.style.height = currentHeight + 'px';
         crop.style.top = e.clientY + 'px';  

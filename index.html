@@ -1,43 +1,41 @@
-<!DOCTYPE html>
-<html> 
-    <head> 
-        <title>Crop Image</title> 
-        <link rel ="stylesheet" href = "style.css" characterset="utf-8"> 
+<!DOCTYPE html> <!-- <!DOCTYPE html> defines the type of the document used(HTML 5)!  -->
+
+<html> <!--<html> defines the html document used!-->
+    <head> <!--<head> defines the metadata documents used!-->
+        <title>Image Crop</title> <!--<title> defines a title for the document used!-->
+        <link rel ="stylesheet" href = "style.css" characterset="utf-8"> <!-- Providing reference to external CSS file using external stylesheet -->
     </head> 
-    <body>
-        <div class="main-content">
+    <body> <!-- <body> tag defines the actual content of the web page -->
+        <div class="main-content"> <!--<div> defines a section in the document!--> 
             <div >
-                <img src="images/ironman.jpg" id="image">
+                <img src="images/ironman.jpg" id="image"> <!-- Providing the image reference the web page-->
             </div>
             <div id="crop-box-display" class="cropper-crop-box crop-style4"> 
-                    <span class="cropper-view-box" id="grid-box"> 
-                    <!-- <img src="images/car.jpg" class="img2"> -->
-                    </span> 
-                    <span class="cropper-dashed dashed-h" id="grid-line1"></span> 
-                    <span class="cropper-dashed dashed-v" id="grid-line2"></span> 
-                    <span class="cropper-center" id="center"></span> 
-                    <span class="cropper-face cropper-move" id="grid"></span> 
-                    <span class="cropper-line line-e" ></span> 
-                    <span class="cropper-line line-n" ></span> 
-                    <span class="cropper-line line-w" ></span> 
-                    <span class="cropper-line line-s" ></span> 
-                    <span class="cropper-point point-e" id="point1"></span> 
-                    <span class="cropper-point point-n" id="point2"></span> 
-                    <span class="cropper-point point-w" id="point3"></span> 
-                    <span class="cropper-point point-s" id="point4"></span> 
-                    <span class="cropper-point point-ne" id="point5"></span> 
-                    <span class="cropper-point point-nw" id="point6"></span> 
-                    <span class="cropper-point point-sw" id="point7"></span> 
-                    <span class="cropper-point point-se" id="point8"> </span> 
-                    <span class="cropper-point point-ne1" id="point9"></span> 
-                    <span class="cropper-point point-nw1" id="point10"></span> 
-                    <span class="cropper-point point-sw1" id="point11"></span> 
-                    <span class="cropper-point point-se1" id="point12"> </span> 
+                <!-- creating grid box view elements-->
+                <span class="cropper-view-box" id="grid-box"> </span> <!--<span> is an inline tag where the elements are made to be in the same line with other elements-->
+                <span class="cropper-grid-solidline grid-solidline-h" id="grid-line1"></span> <!-- used for horizontal grid line-->
+                <span class="cropper-grid-solidline grid-solidline-v" id="grid-line2"></span> <!-- used for vertical grid line-->
+                <span class="cropper-center" id="center"></span>  <!-- for center point in the grid box-->
+                <span class="cropper-face cropper-move" id="grid"></span> <!--main face of the grid box-->
+                <span class="cropper-line line-e" ></span> <!--east line(right side edge)-->
+                <span class="cropper-line line-n" ></span> <!--north line(top side edge)-->
+                <span class="cropper-line line-w" ></span> <!--west line(left side edge)-->
+                <span class="cropper-line line-s" ></span> <!--south line(bottom side edge)-->
+                <span class="cropper-point point-e" id="point1"></span> <!--east point-->
+                <span class="cropper-point point-n" id="point2"></span> <!--north point-->
+                <span class="cropper-point point-w" id="point3"></span> <!--west point-->
+                <span class="cropper-point point-s" id="point4"></span> <!--south point-->
+                <span class="cropper-point point-ne" id="point5"></span> <!--north east point vertical-->
+                <span class="cropper-point point-nw" id="point6"></span> <!--north west point vertical-->
+                <span class="cropper-point point-sw" id="point7"></span> <!--south west point vertical-->
+                <span class="cropper-point point-se" id="point8"> </span> <!--south east point vertical-->
+                <span class="cropper-point point-ne1" id="point9"></span> <!--north east point horizontal -->
+                <span class="cropper-point point-nw1" id="point10"></span> <!--north west point horizontal -->
+                <span class="cropper-point point-sw1" id="point11"></span> <!--south west point horizontal -->
+                <span class="cropper-point point-se1" id="point12"> </span> <!--south east point horizontal -->
             </div> 
-            <button id = "mybtn" class="cropbtn">crop</button> 
-            </div>
-        <script src="script.js"></script> 
+            <button id = "mybtn" class="cropbtn">crop</button> <!-- <button> tag is used to create clickable buttons on the web page-->
+        </div>
+        <script src="script.js"></script> <!-- Providing reference to the external javascript file-->
     </body>
 </html>
-
-
