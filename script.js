@@ -9,9 +9,9 @@ let clickCount = 1;
 // This function is used to display the grid box when the crop button is clicked 
 function displayGrid() {
   document.getElementById("crop-box-display").style.display = "block";
-  document.getElementById("mybtn").style.backgroundColor = "white";
-  document.getElementById("mybtn").style.borderColor = "red";
-  document.getElementById("mybtn").style.opacity = ".5";
+  document.getElementById("mybtn").style.backgroundColor = "lightgrey";
+  document.getElementById("mybtn").style.borderColor = "white";
+  document.getElementById("mybtn").style.opacity = ".7";
   document.getElementById("image").style.border = "2px solid white";
   document.getElementById("image").style.opacity = ".5";
 
