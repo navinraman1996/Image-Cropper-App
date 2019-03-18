@@ -31,14 +31,14 @@ body{
     height: 100%;
     outline-color: white;
     outline: 5px solid white;
-    /* overflow: hidden; */
+   
     width: 100%;
-    /* z-index: 2; */
+    
     background: url(images/ironman.jpg) no-repeat;
     background-position: center;
-    background-position-y: 7px;
+    background-position-y: 11px;
     background-attachment: fixed;
-    /* background: no-repeat; */
+    
 }
 
 .cropper-dashed {
